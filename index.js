@@ -1,5 +1,16 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let originalWord = word.split("");
+  let reservedWorld = [...originalWord].reverse();
+
+  let isItPalindrome = true;
+
+  for (let i = 0; i < originalWord.length; i++) {
+    if (originalWord[i] !== reservedWorld[i]) {
+      isItPalindrome = false;
+    }
+  }
+  return isItPalindrome;
 }
 
 /* 
